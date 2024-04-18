@@ -1,0 +1,1 @@
+const net = new brain.NeuralNetwork();
