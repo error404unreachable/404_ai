@@ -24,4 +24,8 @@ for (let i = 0; i < VideoColorSpace.length; i++) {
 
 const stats = net.train(trainingData);
 
-console.log(stats)
+console.log(stats);
+
+console.log(net.run({
+    red: 0.9
+}));
