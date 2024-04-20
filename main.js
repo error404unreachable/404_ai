@@ -1,19 +1,13 @@
 // Created a new Neural Network
-const network = new brain.NeuralNetwork({ hiddenLayers: [3] });
+const network = new brain.NeuralNetwork({ hiddenLayers: [1] });
 
-// Training Network with 4 input objects
-network.train([
-    {input:[0,0], output:[0]},
-    {input:[0,1], output:[1]},
-    {input:[1,0], output:[1]},
-    {input:[1,1], output:[0]}
-], {
-    log: (error) => console.log(error),
-    logPeriod: 100
+const trainingData = [
+    {input: [0,0], output: [0]},
+    {input: [0,1], output: [1]},
+    {input: [1,0], output: [1]},
+    {input: [1,1], output: [0]}
+];
+
+network.train(trainingData, {
+    log: (error) => console.log(error)
 });
-
-// Expected output of [0,0]
-result = network.run([0,0]);
-
-// Display probability
-document.getElementById("out").innerText = result;
