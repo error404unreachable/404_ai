@@ -26,3 +26,5 @@ for (let restaurantName in restaurants) {
 const stats = network.train(trainingData);
 
 console.log(stats); 
+
+console.log(network.run({ 'Monday': 1 }));
