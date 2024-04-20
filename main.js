@@ -9,8 +9,8 @@ network.train([
     {input:[1,1], output:{zero:1}},
 ]);
 
-// Expected output of [1,0]
-result = network.run([1,0]);
+// Expected output of [0,0]
+result = network.run([0,0]);
 
 // Display probability
-document.getElementById("out").innerText = result["one"] + " " + result["zero"];
+document.getElementById("out").innerText = result;
