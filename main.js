@@ -1,12 +1,12 @@
 // Created a new Neural Network
-const network = new brain.NeuralNetwork();
+const network = new brain.NeuralNetwork({ hiddenLayers: [3] });
 
 // Training Network with 4 input objects
 network.train([
-    {input:[0,0], output:{zero:1}},
-    {input:[0,1], output:{one:1}},
-    {input:[1,0], output:{one:1}},
-    {input:[1,1], output:{zero:1}},
+    {input:[0,0], output:[0]},
+    {input:[0,1], output:[1]},
+    {input:[1,0], output:[1]},
+    {input:[1,1], output:[0]},
 ]);
 
 // Expected output of [0,0]
