@@ -7,12 +7,13 @@ network.train([
     {input:[0,1], output:[1]},
     {input:[1,0], output:[1]},
     {input:[1,1], output:[0]}
-]);
+], {
+    log: (error) => console.log(error),
+    logPeriod: 100
+});
 
 // Expected output of [0,0]
 result = network.run([0,0]);
 
 // Display probability
 document.getElementById("out").innerText = result;
-
-console.log("no u");
