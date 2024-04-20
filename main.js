@@ -15,7 +15,7 @@ const brightnesses = [
 
 const trainingData = [];
 
-for (let i = 0; i < VideoColorSpace.length; i++) {
+for (let i = 0; i < colors.length; i++) {
     trainingData.push({
         input: colors[i],
         output: brightnesses[i]
