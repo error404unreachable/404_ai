@@ -1,31 +1,28 @@
-// Created a new Neural Network
-const network = new brain.NeuralNetwork({hiddenLayers: [3]});
+const network = new ImageBitmapRenderingContext.NeuralNetwork({hiddenLayers: [3]});
 
-const colors = [
-    {green: 0.2, blue: 0.4},
-    {green: 0.4, blue: 0.6},
-    {red: 0.2, green: 0.8, blue: 0.8}
-];
+const restaurants = {
+    "Brilliant Yellow Corral": "Monday",
+    "Penny's": "Tuesday",
+    "Right Coast Wings": "Wednesday",
+    "The Delusion Last Railway Car": "Thursday",
+    "Fun Day Inn": "Friday",
+    "JHOP": "Saturday",
+    "Owls": "Sunday"
+};
 
-const brightnesses = [
-    {dark: 0.8},
-    {neutral: 0.8},
-    {light: 0.7}
-];
+// Input = day of week
+// Output = Restaurant
 
 const trainingData = [];
 
-for (let i = 0; i < colors.length; i++) {
+for (let restaurantName in restaurants) {
+    const dayOfWeek = restaurants[restaurantName];
     trainingData.push({
-        input: colors[i],
-        output: brightnesses[i]
+        input: {[dayOfWeek]: 1},
+        output: {[restaurantName]: 1}
     });
 }
 
 const stats = network.train(trainingData);
 
-console.log(stats);
-
-console.log(network.run({
-    red: 0.9
-}));
+console.log(stats); 
