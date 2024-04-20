@@ -14,3 +14,5 @@ result = network.run([0,0]);
 
 // Display probability
 document.getElementById("out").innerText = result;
+
+console.log("no u");
