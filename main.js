@@ -1,4 +1,4 @@
-const network = new ImageBitmapRenderingContext.NeuralNetwork({hiddenLayers: [3]});
+const network = new brain.NeuralNetwork({hiddenLayers: [3]});
 
 const restaurants = {
     "Brilliant Yellow Corral": "Monday",
