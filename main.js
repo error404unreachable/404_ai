@@ -1,6 +1,12 @@
-const trainingData [
-    [1,2,3,4,5],
-    [5,4,3,2,1]
-];
+const network = new brain.NeuralNetwork();
 
-const network = new brain.recurrent.LSTMTimeStep();
+network.train([
+    {input:[0,0], output:[zero:1]},
+    {input:[0,1], output:[one:1]},
+    {input:[1,0], output:[one:1]},
+    {input:[1,1], output:[zero:1]}
+]);
+
+result = network.run([1,0]);
+
+document.getElementById("out").innerText = result["one"] + " _ " + result["zero"];
