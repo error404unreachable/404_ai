@@ -10,3 +10,4 @@ network.train([
 result = network.run([1,0]);
 
 document.getElementById("out").innerText = result["one"] + "  " + result["zero"];
+
